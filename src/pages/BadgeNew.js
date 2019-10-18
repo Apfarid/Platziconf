@@ -1,6 +1,5 @@
 import React, {Component, Fragment} from 'react'
-import header from '../images/badge-header.svg'
-import Navbar from '../component/Navbar'
+import header from '../images/platziconf-logo.svg'
 import Badge from '../component/Badge'
 import BadgeForm from '../component/BadgeForm'
 import './style/BadgeNew.css'
@@ -34,7 +33,7 @@ class BadgeNew extends Component {
             <Fragment>
 
                 <div className="">
-                    <Navbar/>
+                    
                     <div className="BadgeNew__hero">
                         <img src={header} alt="Logo" className="img-fluid"/>
                     </div>
@@ -44,10 +43,10 @@ class BadgeNew extends Component {
                     <div className="row">
                         <div className="col-6">
                         <Badge
-                            firstName={this.state.form.firstName}
-                            lastName={this.state.form.lastName}
-                            jobTitle={this.state.form.jobTitle}
-                            twitter = {this.state.form.twitter}
+                            firstName={this.state.form.firstName || 'FIRST_NAME'}
+                            lastName={this.state.form.lastName || 'LAST_NAME'}
+                            jobTitle={this.state.form.jobTitle || 'JOB_TITLE'}
+                            twitter = {this.state.form.twitter || 'TWITER'}
                             avatarUrl ="https://www.gravatar.com/avatar?d=identicon"
                             />
                         </div>
