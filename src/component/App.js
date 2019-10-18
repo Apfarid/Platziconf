@@ -1,0 +1,25 @@
+import React from 'react';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import BadgeNew from '../pages/BadgeNew'
+import Badge from '../pages/Badges.js'
+
+function App(){
+    return (
+        <BrowserRouter>
+            <Switch> 
+                <Route exact path="/badges" component={Badge}/>
+                <Route exact path="/badges/new" component={BadgeNew}/>
+
+            </Switch>
+            
+        </BrowserRouter>
+    )
+
+}
+
+export default App
+
+/**
+ * Switch devuelve la primera coincidencia del path
+ * exact path devuelve la direccion exacta
+ */
